@@ -1,0 +1,33 @@
+.category-main-container {
+    margin: 40px;
+    height:100%;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  
+.list-container {
+    height: 80%;
+    padding-top: 50px;
+}
+
+.table-title {
+    text-transform: capitalize;
+}
+
+.list-item {
+    cursor: pointer;
+}
+
+.selected {
+    background-color: #BDBDBD;
+}
+
+.button-style {
+    width: 100px;
+    margin-left:15px;
+    margin-right:15px;
+}
+

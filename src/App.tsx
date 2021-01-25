@@ -1,24 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { NavLink, Route, Switch } from 'react-router-dom';
+import CategoryView from './components/containers/category/category';
+import LocationView from './components/containers/location/location';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="body-container">
+        <Switch>
+          <Route path="/location" exact component={LocationView} />
+          <Route path="/category" exact component={CategoryView} />
+        </Switch>
+      </div>
+
+      <div className="footer-container">
+        <NavLink activeClassName="active" exact to="/category">
+          <div className="link-object">
+            <p>Category</p>
+          </div>
+        </NavLink>
+        <NavLink activeClassName="active" exact to="/location">
+          <div className="link-object">
+            <p>Location</p>
+          </div>
+        </NavLink>
+      </div>
     </div>
   );
 }
